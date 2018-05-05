@@ -5,3 +5,7 @@ export class OpenSidenav {
 export class CloseSidenav {
   static readonly type = '[layout] close sidenav';
 }
+
+export class LoadMenuItems {
+  static readonly type = '[layout] menu items'
+}

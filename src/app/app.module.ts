@@ -26,7 +26,7 @@ import { TranslationModule } from './modules/translation.module';
     NgxsReduxDevtoolsPluginModule.forRoot({
       disabled: environment.production
     }),
-    NgxsLoggerPluginModule.forRoot({ logger: console, collapsed: false }),
+    // NgxsLoggerPluginModule.forRoot({ logger: console, collapsed: true }),
     // NgxsStoragePluginModule.forRoot({
     //   key: '@@STATE',
     //   storage: StorageOption.LocalStorage,

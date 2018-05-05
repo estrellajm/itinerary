@@ -32,6 +32,9 @@ export class ItineraryPlacesService {
   private places$: Observable<Place[]>;
 
   constructor(private db: AngularFirestore) {
+    const settings = { timestampsInSnapshots: true };
+    db.firestore.settings(settings);
+    // afs.app.firestore().settings(settings);
     this.filter$ = new Subject<Filter>();
     this.places$ = this.filter$.pipe(
       switchMap((filter: Filter) => {
