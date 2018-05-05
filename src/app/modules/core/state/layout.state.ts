@@ -1,5 +1,6 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { OpenSidenav, CloseSidenav, LoadMenuItems } from './layout.actions';
+import { PARAMETERS } from '@angular/core/src/util/decorators';
 
 export interface LayoutStateModel {
   showSidenav: boolean;
@@ -47,6 +48,9 @@ export class LayoutState {
     });
   }
 
+  /// trying to select the selector below while passing parameter
+  /// Origin
+  /// src/app/modules/core/components/sidenav/sidenav.component.ts
   @Selector()
   static table(myArg) {
     console.log(myArg); // <== Seems to call LayoutState

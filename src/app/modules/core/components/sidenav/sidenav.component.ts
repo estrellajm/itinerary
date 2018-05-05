@@ -11,6 +11,8 @@ import { LayoutState } from '@app/modules/core/state/layout.state';
 })
 export class SidenavComponent implements OnInit {
   @Input() open = false;
+  /// Trying to send 'variable_string' to selector below
+  /// src/app/modules/core/state/layout.state.ts
   @Select(LayoutState.table, 'variable_string') table$;
   
   ////////////////////////////////////////////////////////////////////
@@ -27,3 +29,5 @@ export class SidenavComponent implements OnInit {
     // this.fields$.subscribe(a => console.log(a))   
   }
 }
+
+
